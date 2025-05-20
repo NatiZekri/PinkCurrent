@@ -1,0 +1,20 @@
+import sys
+import time
+import threading
+import subprocess
+import webbrowser
+from PyQt5.QtWidgets import QApplication, QSystemTrayIcon, QMenu, QAction, QMessageBox, QLabel
+from PyQt5.QtGui import QIcon
+import sys
+import os
+
+def resource_path(relative_path):
+    base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
+    return os.path.join(base_path, relative_path)
+
+
+SERVER = "192.168.100.20"
+PING_INTERVAL = 5
+#print(resource_path("photo.png"))
+#print(QIcon(resource_path('green.png')).isNull())
+open_link_action = QAction("Autenticate to internal")
